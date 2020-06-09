@@ -20,6 +20,11 @@ describe 'A Tic Tac Toe board' do
   	expect(@board.locations).to eq(temp_locations)
   end
 
+  it '#token_at' do
+  	@board.place(:x, :middle, :left)
+  	expect(@board.locations[:middle][:left]).to eq(:x)
+  end
+
   it '#reset' do
   	expect(@board.reset)
   	expect(@board.reset).to be_truthy
