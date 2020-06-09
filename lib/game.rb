@@ -8,6 +8,7 @@ class Game
 
 	def initialize(my_board = "FAKE")
 		@board = my_board
+		@over = false
 	end
 
 	def board
@@ -15,6 +16,6 @@ class Game
 	end
 
 	def over?
-
+		@over
 	end
 end
