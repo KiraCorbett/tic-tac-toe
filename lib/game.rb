@@ -8,6 +8,7 @@ class Game
 
 	def initialize(board = Board.new)
 		@board = board
+		@over = false
 	end
 
 	def board
@@ -16,6 +17,11 @@ class Game
 
 	def over?
 		@board.full?
+	end
+
+	def tie?
+		@over
+		self.over?
 	end
 end
 
