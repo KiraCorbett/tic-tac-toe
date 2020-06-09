@@ -29,10 +29,9 @@ describe 'A Tic Tac Toe board' do
   	expect(@board.empty?).to be_truthy
   end
 
-  # it '#full' do
-  # 	@board
-  # 	@board = @board.full?
-  # 	expect(@board.empty?).to be_falsey
-  # end
+  it '#full' do
+  	@board = Board.new(fake_board)
+  	expect(@board.full?).to be_truthy
+  end
 
 end
