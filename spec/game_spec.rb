@@ -71,18 +71,20 @@ describe 'A game of tic tac toe' do
   end
 
   describe 'winning' do
-
     it 'reports :x is the winner when a row is full of :x' do
+      skip
       game = Game.new(x_wins_board)
       expect(game.winner).to eq(:x)
     end
 
     it 'reports :o is the winner when a row is full of :o' do
+      skip
       game = Game.new(o_wins_board)
       expect(game.winner).to eq(:o)
     end
 
     it 'reports nil if there is no winner' do
+      skip
       game = Game.new
       expect(game.winner).to be_nil
     end
