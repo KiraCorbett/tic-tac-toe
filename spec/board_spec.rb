@@ -2,19 +2,19 @@ require_relative '../lib/board'
 
 describe 'A Tic Tac Toe board' do
 
+  before { (@board = Board.new) }
+
   it 'exists' do
-  	Board.new
+  	@board
   end
 
   it '#reset' do
-  	board = Board.new
-  	expect(board.reset)
-  	expect(board.reset).to be_truthy
+  	expect(@board.reset)
+  	expect(@board.reset).to be_truthy
   end
 
   it '#empty' do
-  	board = Board.new
-  	expect(board.empty?).to be_truthy
+  	expect(@board.empty?).to be_truthy
   end
 
 end
