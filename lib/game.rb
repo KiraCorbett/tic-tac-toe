@@ -13,4 +13,8 @@ class Game
 	def board
 		@board
 	end
+
+	def over?
+
+	end
 end
