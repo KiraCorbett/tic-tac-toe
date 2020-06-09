@@ -6,9 +6,8 @@ end
 
 class Game
 
-	def initialize(my_board = "FAKE")
-		@board = my_board
-		@over = false
+	def initialize(board = Board.new)
+		@board = board
 	end
 
 	def board
@@ -16,6 +15,34 @@ class Game
 	end
 
 	def over?
-		@over
+		@board.full?
 	end
 end
+
+
+
+# class Game
+#   def initialize(board = Board.new)
+#     @board = board
+#   end
+
+#   def board
+#     @board
+#   end
+
+#   def over?
+#     @board.full?
+#   end
+
+#   def tie?
+#     self.over?
+#   end
+
+#   def winner
+#     if @board.token_at(:top, :left) == :x && @board.token_at(:top, :middle) == :x && @board.token_at(:top, :right) == :x
+#       return :x
+#     elsif @board.token_at(:top, :left) == :o && @board.token_at(:top, :middle) == :o && @board.token_at(:top, :right) == :o
+#       return :o
+#     end
+#     nil
+#   end
